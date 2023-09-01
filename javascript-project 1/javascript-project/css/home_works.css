@@ -1,0 +1,222 @@
+
+/* GMAIL BLOCK */
+
+.gmail_block {
+    background: #000000;
+    padding: 100px 0;
+}
+
+.inner_gmail_block {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 5px solid #2695d9;
+    height: 300px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.form_gmail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_gmail button {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* MOVE BLOCK */
+
+.move_block {
+    background: black;
+    padding: 100px 0;
+}
+
+.parent_block {
+    height: 500px;
+    width: 500px;
+    border: 5px solid #2695d9;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.child_block {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+
+.inner_move_block {
+    margin-top: 50px;
+}
+
+/* STOP WATCH */
+
+.time {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #2695d9;
+    margin-top: 40px;
+}
+
+.time_block {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.stopwatch {
+    padding: 100px 0;
+    background: black;
+}
+ .stopwatch button{
+     width: 190px;
+     height: 13vh;
+     border-radius: 12px;
+     font-size: 1.6rem;
+     top: 50px;
+     padding-bottom: 30px;
+     margin-bottom: 98px;
+     left: 322px;
+     margin-right: 38px;
+}
+
+
+.btn{
+    padding: 0.9em 1.6em;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    width: 12rem;
+    height: 4rem;
+    background: #2695d9;
+}
+
+.btn::after{
+    content: "";
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.01);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* glow */
+.btn::before {
+    content: "";
+    background: linear-gradient(
+            45deg,
+            #ff09b4,
+            #5f00ff,
+            #ff69b4,
+            #5f00ff,
+            #00f7ff,
+            #5f00ff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: qlowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+@keyframes btn {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 800% 0;
+    }
+}
+
+/* hover */
+
+.btn:hover::before {
+    opacity: 1;
+    animation: qlowing 15s linear infinite;
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+.btn:active {
+    color: rgba(9, 54, 79, 0.29);
+    font-weight: bold;
+}
+
+
+.word-waves span {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    transform: translate(-5%, -50%);
+}
+.word-waves span:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 3px #00f7ff;
+}
+.word-waves span:nth-child(2) {
+    color: rgb(128, 198, 255);
+    -webkit-text-stroke: 1px #00f7ff;
+    animation: animation 3s ease-in-out infinite;
+}
+@keyframes animation {
+    0%, 100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%,
+        54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%,
+        51% 62%, 67%  50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+
+.slider {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    display: none;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 44px;
+    background-color: #000000;
+    color: white;
+}
+
+
